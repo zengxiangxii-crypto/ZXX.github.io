@@ -3,157 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的名字 | 设计师作品集</title>
+    <title>Designer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 引入 Google Fonts (可选) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- 图标库 FontAwesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- 导航栏 -->
+    <!-- 导航 -->
     <nav>
-        <div class="logo">PORTFOLIO.</div>
-        <ul class="nav-links">
-            <li><a href="#hero">主页</a></li>
-            <li><a href="#about">关于我</a></li>
-            <li><a href="#work">作品集</a></li>
-            <li><a href="#resume">简历</a></li>
-            <li><a href="#contact">联系</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+        <div class="logo" id="nav-logo"></div>
+        <div class="menu-btn">MENU</div>
     </nav>
 
-    <!-- Hero 区域 -->
-    <section id="hero" class="fade-in">
-        <div class="hero-content">
-            <h1>你好，我是 <span class="highlight">你的名字</span></h1>
-            <h2>UI/UX 设计师 & 视觉创意者</h2>
-            <p>专注于创造简洁、直观且富有情感的用户体验。</p>
-            <a href="#work" class="btn">查看作品</a>
-        </div>
-    </section>
+    <!-- 全屏遮罩菜单 -->
+    <div class="menu-overlay">
+        <div class="close-btn">CLOSE</div>
+        <ul class="menu-list">
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#works">WORKS</a></li>
+            <li><a href="#resume">RESUME</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
 
-    <!-- 关于我 -->
-    <section id="about" class="fade-in">
+    <!-- 头部区域 -->
+    <header id="hero">
         <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>我是一名拥有 5 年经验的设计师，热衷于解决复杂的设计问题。我的设计哲学是“形式追随功能”，在保证美观的同时，我更注重用户的实际操作体验。</p>
-                    <div class="skills">
-                        <span>Figma</span>
-                        <span>Adobe CC</span>
-                        <span>HTML/CSS</span>
-                        <span>Blender</span>
-                        <span>Prototyping</span>
-                    </div>
-                </div>
-                <!-- 请替换这里的图片链接 -->
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="设计师照片">
-                </div>
-            </div>
+            <h1 id="hero-name" class="fade-up"></h1>
+            <h2 id="hero-title" class="fade-up delay-1"></h2>
+            <p id="hero-bio" class="fade-up delay-2"></p>
         </div>
-    </section>
+    </header>
 
-    <!-- 作品集 -->
-    <section id="work" class="fade-in">
+    <!-- 作品区域 -->
+    <section id="works">
         <div class="container">
-            <div class="section-title">
-                <h2>Selected Works</h2>
+            <div class="section-header">
+                <h3>Selected Works</h3>
+                <span class="line"></span>
             </div>
-            <div class="work-grid">
-                <!-- 作品卡片 1 -->
-                <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1555421689-492a18d9c3ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="项目1">
-                    <div class="work-info">
-                        <h3>电商 App 重构</h3>
-                        <p>UI Design / User Research</p>
-                    </div>
-                </div>
-                <!-- 作品卡片 2 -->
-                <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="项目2">
-                    <div class="work-info">
-                        <h3>金融数据仪表盘</h3>
-                        <p>Web Design / Data Viz</p>
-                    </div>
-                </div>
-                <!-- 作品卡片 3 -->
-                <div class="work-card">
-                    <img src="https://images.unsplash.com/photo-1626785774573-4b799312afc2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="项目3">
-                    <div class="work-info">
-                        <h3>品牌视觉识别 VI</h3>
-                        <p>Branding / Graphic</p>
-                    </div>
-                </div>
-            </div>
+            <!-- 作品列表将通过 JS 自动插入这里 -->
+            <div class="works-grid" id="works-container"></div>
         </div>
     </section>
 
-    <!-- 简历 / 经历 -->
-    <section id="resume" class="fade-in">
+    <!-- 简历区域 -->
+    <section id="resume">
         <div class="container">
-            <div class="section-title">
-                <h2>Experience</h2>
+            <div class="section-header">
+                <h3>Experience</h3>
+                <span class="line"></span>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - 至今</div>
-                    <div class="timeline-content">
-                        <h3>高级 UI 设计师</h3>
-                        <h4>某某科技有限公司</h4>
-                        <p>负责公司核心 SaaS 产品的界面迭代，建立 Design System，提升团队协作效率 30%。</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2021</div>
-                    <div class="timeline-content">
-                        <h3>UI/UX 设计师</h3>
-                        <h4>创意设计工作室</h4>
-                        <p>参与多个从0到1的创业项目，包括移动端 App 和响应式网站设计。</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2015 - 2019</div>
-                    <div class="timeline-content">
-                        <h3>视觉传达 (本科)</h3>
-                        <h4>某某美术学院</h4>
-                        <p>主修平面设计、排版与色彩理论。</p>
-                    </div>
-                </div>
-            </div>
+            <!-- 简历列表将通过 JS 自动插入这里 -->
+            <div class="resume-list" id="resume-container"></div>
         </div>
     </section>
 
-    <!-- 联系方式 -->
-    <section id="contact" class="fade-in">
-        <div class="container">
-            <h2>Let's Talk</h2>
-            <p>有有趣的项目？或者只是想喝杯咖啡聊聊天？随时联系我。</p>
-            <a href="mailto:yourname@email.com" class="email-link">yourname@email.com</a>
-            
-            <div class="social-links">
-                <a href="#">Behance</a>
-                <a href="#">Dribbble</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">Instagram</a>
-            </div>
+    <!-- 底部 -->
+    <section id="contact">
+        <div class="container center-text">
+            <h3>Ready to create?</h3>
+            <a id="contact-email" href="" class="big-link"></a>
+            <div class="socials" id="social-container"></div>
+            <p class="copyright">© 2024 Design Portfolio.</p>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
+    <!-- 作品详情弹窗 -->
+    <div class="modal" id="work-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-img" src="" alt="">
+            <div class="modal-text">
+                <h3 id="modal-title"></h3>
+                <p class="modal-cat" id="modal-cat"></p>
+                <p id="modal-desc"></p>
+            </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- 引入脚本：注意顺序 -->
+    <script src="config.js"></script>
+    <script src="logic.js"></script>
 </body>
 </html>
