@@ -41,13 +41,13 @@ const siteConfig = {
         {
             title: "金融仪表盘设计",
             category: "UI Design",
-            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80", // 这里换成 "images/work1.jpg"
+            image: "images/曾祥熙简历-01-01.jpg, // 这里换成 "images/work1.jpg"
             description: "为一家金融科技公司设计的 B 端数据可视化后台，提升了数据阅读效率 40%。"
         },
         {
             title: "极简电商 APP",
             category: "Mobile App",
-            image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80", // 这里换成 "images/work2.jpg"
+            image: "images/曾祥熙简历-01-01.jpg", // 这里换成 "images/work2.jpg"
             description: "专注于年轻潮流品牌的电商应用，采用了大胆的留白和排版。"
         },
         {
